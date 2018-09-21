@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">一米云摄像</string>
+
+    <!-- 扫码 -->
+    <string name="scan_text">将二维码放入框内扫描</string>
+
+    <!-- 下拉刷新 -->
+    <string name="pull_to_refresh_pull_label">下拉刷新列表</string>
+    <string name="pull_to_refresh_release_label">释放以刷新..</string>
+    <string name="pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="pull_to_refresh_tap_label">点击刷新...</string>
+    <string name="anyan_device_not_found">安眼平台上找不到该摄像头  [ id = %s ]</string>
+    <string name="web_api_request_error">网络请求失败</string>
+    <string name="web_api_request_error_with_code">网络请求失败 [ %d ]</string>
+    <string name="anyan_network_error">安眼平台网络错误</string>
+    <string name="anyan_response_error_with_code">安眼平台应答错误 (error %d)</string>
+    <string name="duplicate_add_error">请勿重复添加摄像头</string>
+    <!-- 提示信息 -->
+    <string name="msg_sys_param_error">参数错误</string>
+    <string name="msg_sys_unknown_exception">未知异常</string>
+    <string name="msg_request_error">网络异常…</string>
+    <string name="msg_sys_busy">系统繁忙请稍候再试</string>
+    <string name="msg_progressDialog">正在为您拼命加载</string>
+    <string name="msg_sys_word_error">字符不能超过500字</string>
+    <string name="msg_sys_net_unavailable">网络不可用，请打开网络</string>
+    <string name="msg_sys_Submit_server_confirms">正在提交服务器确认…</string>
+    <string name="msg_watting_request">请稍后.....</string>
+
+    <string name="defaultnetspeed">0.00Kb/s</string>
+</resources>

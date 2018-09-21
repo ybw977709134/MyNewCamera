@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:switch="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/result_view">
+
+        <ImageView
+            android:id="@+id/camera_setting_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="12dp"
+            android:paddingRight="20dp"
+            android:paddingTop="12dp"
+            android:src="@mipmap/back_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="摄像机设置"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+      <ImageButton
+          android:id="@+id/seting_share_device_id"
+          android:layout_marginRight="15dp"
+          android:layout_centerVertical="true"
+          android:layout_alignParentRight="true"
+          android:background="@null"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@mipmap/icon_share_white"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_reg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/rel_title"
+        android:background="@color/gray" />
+
+    <View
+        android:id="@+id/res_view"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/view_reg" />
+
+    <RelativeLayout
+        android:layout_below="@+id/res_view"
+        android:id="@+id/camera_swch_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/camera_swch_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="分享到广场"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.onemeter.mynewcamera.view.Switch
+            android:id="@+id/camera_swch_text_btn"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            switch:checked="true"
+            switch:duration="250"
+            switch:spotOffColor="@color/result_view"
+            switch:switchOffColor="@color/gainsboro"
+            switch:switchOffStrokeColor="#FFFFFF"
+            switch:switchOnColor="@color/colorPrimary"
+            switch:spotPadding="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/main_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/camera_swch_btn"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <View
+            android:id="@+id/my_rel_view_03"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/baojing_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/my_rel_view_03"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/baojing_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="侦测报警"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/my_rel_view_04"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/baojing_btn" />
+
+        <RelativeLayout
+            android:id="@+id/wifi_setting_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/my_rel_view_04"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="网络配置"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/my_rel_view_05"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/wifi_setting_btn" />
+
+        <RelativeLayout
+            android:id="@+id/share_camera_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/my_rel_view_05"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="设备共享"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/my_rel_view_06"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:layout_below="@+id/share_camera_btn" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/yun_cunchu_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/my_rel_view_06"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="云存储"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/my_rel_view_07"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/yun_cunchu_btn" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/other_setting_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/my_rel_view_07"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="其他设置"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/delete_camera_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_rel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edt_style_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="删除设备"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        tools:targetApi="honeycomb" />
+
+    <Spinner
+        android:id="@+id/tbtn_control_resolution"
+        android:layout_width="60dp"
+       android:visibility="gone"
+        android:layout_height="fill_parent"
+        android:background="@drawable/play_resolution_normal" />
+
+</RelativeLayout>

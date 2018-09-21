@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="您确定要执行删除操作吗？"
+        android:textSize="20dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/photo_gallery_selector"
+        tools:targetApi="honeycomb" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/button_exit"
+        android:layout_centerHorizontal="true"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@color/colorPrimary"
+        tools:targetApi="honeycomb" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/button_qx"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/cancel_selector"
+            android:text="取消"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@drawable/text_selector"
+            tools:targetApi="honeycomb" />
+        <Button
+            android:layout_width="1dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            tools:targetApi="honeycomb" />
+
+        <Button
+            android:id="@+id/button_qd"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:text="确定"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/ok_selector"
+            android:textColor="@drawable/text_selector"
+            tools:targetApi="honeycomb" />
+    </LinearLayout>
+
+</RelativeLayout>

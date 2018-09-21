@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.onemeter.mynewcamera"
+        minSdkVersion 8
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile files('libs/zxing.jar')
+    compile files('libs/com.ulucu.anyan.sdk-20160607-v2.1.0_00001-release.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/GifView.jar')
+    compile files('libs/universal-image-loader-1.9.2.jar')
+    compile files('libs/JxUtils-2.6.14.jar')
+}

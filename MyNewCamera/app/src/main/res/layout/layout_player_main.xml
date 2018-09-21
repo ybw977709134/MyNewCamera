@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252930"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/camera_setting_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="10dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:src="@mipmap/icon_back_green"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/camera_player_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="摄像头"
+            android:textColor="@color/result_view"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/camera_player_share_btn"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/camera_player_setting_btn"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_share" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/camera_player_setting_btn"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@mipmap/icon_set" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!--播放器组件-->
+    <FrameLayout
+        android:id="@+id/llysuface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_title">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="fill_parent"
+            android:layout_height="256dp" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_title_lan"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:alpha="0.5"
+        android:background="@color/transparent_50"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/camera_setting_back_lan"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="10dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:src="@mipmap/icon_back_green"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/camera_player_title_lan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="摄像头"
+            android:textColor="@color/result_view"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/tbtn_control_resolution_lan"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/play_resolution_pressed" />
+
+        <ToggleButton
+            android:id="@+id/tbtn_control_voice_lan"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/tbtn_control_resolution_lan"
+            android:layout_toStartOf="@+id/tbtn_control_resolution_lan"
+            android:background="@drawable/voiceselete"
+            android:button="@null"
+            android:padding="20dp"
+            android:textOff=""
+            android:textOn="" />
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pro_loading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+   <ImageView
+       android:id="@+id/left_and_right"
+       android:src="@mipmap/gesture_leftright"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="120dp"
+       android:visibility="gone"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/up_and_down"
+        android:src="@mipmap/gesture_updown"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:id="@+id/right_rel_main"
+        android:layout_width="120dp"
+        android:layout_height="350dp"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/llysuface"
+        android:layout_alignParentRight="true">
+
+        <RelativeLayout
+            android:id="@+id/record_btn_rel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/mBtnSpeak_rel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:alpha="0.5"
+            android:background="@drawable/bg_style_04">
+
+            <ToggleButton
+                android:id="@+id/record_btn_lan"
+                android:layout_width="32dp"
+                android:layout_height="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/icon_video"
+                android:button="@null"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mBtnSpeak_rel"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:alpha="0.5"
+            android:background="@drawable/bg_style_04">
+
+            <ImageButton
+                android:id="@+id/mBtnSpeak_lan"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@mipmap/icon_speeker"
+                android:text="按住说话"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/snap_btn_rel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/mBtnSpeak_rel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:alpha="0.5"
+            android:background="@drawable/bg_style_04"
+            >
+
+            <ImageButton
+                android:id="@+id/snap_btn_lan"
+                android:layout_width="30dp"
+                android:layout_height="22dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/icon_printscreen"
+                android:text="截图"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <!--码率-->
+    <TextView
+        android:id="@+id/txt_rate_lan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/llysuface"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:text="0.00KB/s"
+        android:visibility="gone"
+        android:textColor="@color/result_view" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlycontrol"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/llysuface"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#53575e"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/icon_speed" />
+
+
+        <!--码率-->
+        <TextView
+            android:id="@+id/txt_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="0.00KB/s"
+            android:textColor="@color/result_view" />
+
+
+        <ToggleButton
+            android:id="@+id/tbtn_control_play"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/playstateselete"
+            android:textOff=""
+            android:textOn=""
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/tbtn_control_resolution"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_toLeftOf="@+id/tbtn_control_zoom"
+            android:layout_toStartOf="@+id/tbtn_control_zoom"
+            android:background="@drawable/play_resolution_pressed" />
+
+        <ToggleButton
+            android:id="@+id/tbtn_control_voice"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/tbtn_control_resolution"
+            android:layout_toStartOf="@+id/tbtn_control_resolution"
+            android:background="@drawable/voiceselete"
+            android:button="@null"
+            android:padding="20dp"
+            android:textOff=""
+            android:textOn="" />
+
+        <ToggleButton
+            android:id="@+id/tbtn_control_zoom"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/zoomselete"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/lsv_channel"
+        android:layout_width="100dp"
+        android:layout_height="fill_parent"
+        android:background="#f2ecd6"
+        android:visibility="gone">
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/btn_device_action_rel"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/rlycontrol"
+        android:layout_marginTop="60dp">
+
+    <RelativeLayout
+        android:id="@+id/record_btn_time_rel"
+        android:layout_above="@+id/bg_record_btn_rel"
+        android:layout_alignStart="@+id/bg_record_btn_rel"
+        android:layout_alignLeft="@+id/bg_record_btn_rel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/record_btn_time_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="0:"/>
+        <TextView
+            android:layout_toRightOf="@+id/record_btn_time_min"
+            android:id="@+id/record_btn_time_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="00"/>
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bg_record_btn_rel"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/bg_style_selector">
+
+            <ToggleButton
+                android:id="@+id/record_btn"
+                android:layout_width="32dp"
+                android:layout_height="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/icon_video"
+                android:button="@null"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+      <TextView
+          android:id="@+id/bg_mBtnSpeak_time_massg"
+          android:layout_above="@+id/bg_mBtnSpeak_rel"
+          android:layout_centerHorizontal="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="16sp"
+          android:layout_marginBottom="10dp"
+          android:text="录音倒计时"/>
+
+        <RelativeLayout
+            android:id="@+id/bg_mBtnSpeak_rel"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/bg_style_selector">
+
+            <ImageButton
+                android:id="@+id/mBtnSpeak"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@mipmap/icon_speeker"
+                android:text="按住说话"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+      <TextView
+          android:id="@+id/bg_snap_btn_massg"
+          android:layout_alignRight="@+id/bg_snap_btn_rel"
+          android:layout_alignEnd="@+id/bg_snap_btn_rel"
+          android:layout_marginBottom="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_above="@+id/bg_snap_btn_rel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="16sp"
+          android:text="在相册中"/>
+
+
+        <RelativeLayout
+            android:id="@+id/bg_snap_btn_rel"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/bg_style_selector">
+
+            <ImageButton
+                android:id="@+id/snap_btn"
+                android:layout_width="30dp"
+                android:layout_height="22dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/icon_printscreen"
+                android:text="截图"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

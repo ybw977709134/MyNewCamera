@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke" >
+    
+    
+    <RelativeLayout
+        android:id="@+id/rel_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/result_view"
+       >
+        
+        <ImageView
+            android:id="@+id/imageButton_add_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:layout_centerVertical="true"
+            android:paddingRight="20dp"
+            android:src="@mipmap/back_return"/>
+        
+
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+			android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="添加设备"/>
+        
+    </RelativeLayout>
+    
+    
+    <RelativeLayout
+        android:layout_below="@+id/rel_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whitesmoke"
+        android:layout_marginTop="100dp"
+      >
+               
+        <TextView 
+            android:id="@+id/textView_net_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@color/blue"
+            android:text="请输入摄像头的设备号"/>
+               
+        <ImageView 
+            android:id="@+id/imageView1"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@id/textView_net_title"
+        	android:layout_marginTop="30dp"
+            android:visibility="invisible"
+        	android:background="@drawable/bg_section_divider_line_light"/>       
+        
+        <EditText 
+            android:id="@+id/editText_add_deviceId"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/imageView1"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edt_style_white"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:hint="设备ID"/>
+        
+        <ImageView 
+            android:id="@+id/imageView2"
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+            android:visibility="invisible"
+       		android:background="@drawable/bg_section_divider_line_light"
+       		android:layout_below="@id/editText_add_deviceId"/>
+        
+        <Button 
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edt_style_btn"
+            android:layout_below="@id/imageView2"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:text="确定"/>
+        
+    </RelativeLayout>
+    
+    
+
+</RelativeLayout>
+

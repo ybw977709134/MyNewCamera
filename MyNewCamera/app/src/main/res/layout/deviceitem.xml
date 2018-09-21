@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/edt_style_bgg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_main"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+       <ImageView
+           android:id="@+id/bg_guangchang_img"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_centerVertical="true"
+           android:layout_centerHorizontal="true"
+           android:src="@mipmap/illu_camera"
+           android:visibility="visible"
+          />
+        <ImageView
+            android:id="@+id/bg_guangchang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:src="@mipmap/illu_camera"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/txt_devicesonline"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_style_green"
+            android:gravity="center"
+            android:text="在线"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/txt_devicesowner"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="类型"
+            android:textColor="@color/balck_title"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/rel_main"
+        android:id="@+id/tutton_rel"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#9AA0AB">
+
+
+        <TextView
+            android:id="@+id/txt_devicename"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="11dp"
+            android:gravity="center"
+            android:text="摄像机名称"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

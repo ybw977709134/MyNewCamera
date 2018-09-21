@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:background="@mipmap/bg_tooltip"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+<Button
+    android:id="@+id/add_camera_for_perbtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:layout_weight="1"
+    android:text="手动添加"
+    android:visibility="gone"
+    android:gravity="bottom|center"
+    android:paddingBottom="10dp"
+    android:textSize="16sp"
+    android:textColor="@color/white"/>
+
+
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/camera_wifi_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="添加新设备"
+        android:gravity="bottom|center"
+        android:paddingBottom="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/balck_title_02"/>
+
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/add_camera_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="扫一扫"
+        android:gravity="bottom|center"
+        android:paddingBottom="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/balck_title_02"/>
+
+</LinearLayout>

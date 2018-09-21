@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke" >
+    <RelativeLayout
+        android:id="@+id/rel_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/result_view">
+
+        <ImageView
+            android:id="@+id/device_btn_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="12dp"
+            android:paddingRight="15dp"
+            android:paddingTop="12dp"
+            android:src="@mipmap/back_return"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="请输入设备名称"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_device_main"
+        android:layout_below="@+id/rel_title"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_height="45dp">
+
+       <TextView
+           android:id="@+id/text_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="摄像机ID："
+           android:textSize="15sp"
+           android:layout_centerVertical="true"
+           android:layout_marginLeft="20dp"
+           android:textColor="@color/balck_title_02"/>
+
+        <TextView
+
+            android:layout_toRightOf="@+id/text_name"
+            android:id="@+id/device_id_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dasdsdsds"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/balck_title_02"
+            android:textSize="15sp"
+            />
+
+    </RelativeLayout>
+
+
+    
+    <RelativeLayout
+        android:id="@+id/device_main_btn_rel"
+        android:layout_below="@+id/rel_device_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+       android:background="@color/white">
+
+        <ImageView
+            android:layout_alignStart="@+id/editText_device_name"
+            android:layout_alignLeft="@+id/editText_device_name"
+            android:id="@+id/imageView1"
+        	android:layout_width="25dp"
+        	android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/illu_camera"
+        	/>
+                
+        <EditText
+            android:id="@+id/editText_device_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="15sp"
+            android:paddingLeft="50dp"
+            android:background="@null"
+            android:textColor="#404040"
+            android:hint="请设定摄像机名称"/>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edt_style_btn"
+        android:layout_below="@id/device_main_btn_rel"
+        android:textSize="18sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/result_view"
+        android:text="确认添加"
+        tools:targetApi="honeycomb" />
+
+</RelativeLayout>
+
+

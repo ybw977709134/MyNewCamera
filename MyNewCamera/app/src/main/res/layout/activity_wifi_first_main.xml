@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/result_view">
+
+        <ImageView
+            android:id="@+id/camera_fragment_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="12dp"
+            android:paddingRight="15dp"
+            android:paddingTop="12dp"
+            android:src="@mipmap/back_return"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="第 1 步"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+  <ScrollView
+      android:layout_below="@+id/rel_title"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/whitesmoke"
+          android:orientation="vertical">
+
+          <RelativeLayout
+              android:id="@+id/rel_main"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <RelativeLayout
+                  android:id="@+id/img_text_rel"
+                  android:layout_width="match_parent"
+                  android:layout_height="400dp"
+                  android:background="@color/result_view"
+                  android:layout_alignParentTop="true">
+
+                  <TextView
+                      android:id="@+id/second_text_msg"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginTop="20dp"
+                      android:text="准备摄像机"
+                      android:textColor="@color/white"
+                      android:textSize="17sp" />
+
+                  <com.ant.liao.GifView
+                      android:id="@+id/wifi_first_img"
+                      android:layout_width="300dp"
+                      android:layout_height="300dp"
+                      android:paddingLeft="20dp"
+                      android:layout_below="@+id/second_text_msg"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginTop="20dp" />
+
+              </RelativeLayout>
+
+              <RelativeLayout
+                  android:id="@+id/rel_tutt"
+                  android:layout_width="match_parent"
+                  android:layout_height="80dp"
+                  android:layout_below="@+id/img_text_rel"
+                  android:layout_marginTop="10dp"
+                  android:background="@color/whitesmoke"
+                  android:gravity="center"
+                  android:orientation="vertical">
+
+                  <TextView
+                      android:layout_width="270dp"
+                      android:layout_height="wrap_content"
+                      android:layout_centerHorizontal="true"
+                      android:layout_centerVertical="true"
+                      android:gravity="center"
+                      android:text="请确认摄像机已经连接电源，且红灯闪烁"
+                      android:textColor="@color/grayblack"
+                      android:textSize="16sp" />
+
+              </RelativeLayout>
+
+              <Button
+                  android:layout_below="@+id/rel_tutt"
+                  android:id="@+id/wifi_first_next_btn"
+                  style="?android:attr/borderlessButtonStyle"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:layout_marginTop="20dp"
+                  android:background="@drawable/edt_style_btn_code"
+                  android:gravity="center"
+                  android:text="下一步"
+                  android:textColor="@color/white"
+                  android:textSize="18sp"
+                  tools:targetApi="honeycomb" />
+
+          </RelativeLayout>
+
+      </LinearLayout>
+
+  </ScrollView>
+
+
+</RelativeLayout>

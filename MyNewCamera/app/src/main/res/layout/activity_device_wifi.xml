@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke" >
+    
+    
+    <RelativeLayout
+        android:id="@+id/layout_wifi_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/result_view"
+         >
+        
+        <ImageButton 
+            android:id="@+id/imageButton_wifi_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:visibility="visible"
+            android:layout_centerVertical="true"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back_return"/>
+
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+			android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="wifi列表"/>
+        
+    </RelativeLayout>
+
+    <ListView  
+        android:id="@+id/listView"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:divider="@drawable/bg_section_divider_line_light"
+        android:layout_below="@id/layout_wifi_title" >  
+    </ListView> 
+    
+    
+    
+    
+    
+
+</RelativeLayout>
+

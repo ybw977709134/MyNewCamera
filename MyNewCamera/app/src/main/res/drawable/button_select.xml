@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <gradient android:startColor="#5db0b8" android:endColor="#5db0b8"
+                android:angle="90" /><code class="comments">//颜色渐变</code>
+            <stroke android:width="0dip" android:color="#CCFFFF" /><code class="comments">//按钮边缘</code>
+            <corners android:radius="5dp" /><code class="comments">//按钮四个圆角</code>
+            <padding android:left="0dp" android:top="0dp"
+                android:right="0dp" android:bottom="0dp" /><code class="comments">//按钮文字和边缘距离(内边距)</code>
+        </shape>
+    </item>
+
+    <item android:state_focused="true">
+        <shape>
+            <gradient android:startColor="#ffc2b7" android:endColor="#ffc2b7"
+                android:angle="90" />
+            <stroke android:width="1dip" android:color="#00ffffff" />
+            <corners android:radius="0dp" />
+            <padding android:left="0dp" android:top="0dp"
+                android:right="0dp" android:bottom="0dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <gradient android:startColor="#b3ccff" android:endColor="#b3ccff"
+                android:angle="90" />
+            <stroke android:width="1dip" android:color="#00ffffff" />
+            <corners android:radius="5dip" />
+            <padding android:left="0dp" android:top="0dp"
+                android:right="0dp" android:bottom="0dp" />
+        </shape>
+    </item>
+</selector>
